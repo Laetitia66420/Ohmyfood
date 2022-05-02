@@ -52,7 +52,7 @@ body {
     padding: 0;
     overflow: hidden;
     }
-    .menu__background {
+    .menu__image {
         @media (min-width: $breakpoint-tablet) {
             height: 50rem;
         }
@@ -84,7 +84,7 @@ body {
             padding-right: 1rem;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             h2 {
                 font-family: $fontLogoAndTitles;
                 font-size: 1.4rem;
@@ -148,7 +148,7 @@ body {
 
 .btn {    
     @media (min-width: $breakpoint-desktop) {
-        margin: 2rem;
+        margin: 1rem;
     }
     @include margin-left-and-right;
     @include box-shadow;    
@@ -159,29 +159,11 @@ body {
     margin-bottom: 1.1rem;
     display: flex;
     overflow: hidden;
-    &:hover {
-        animation: cardSelect 300ms forwards;
-        .btn__body__animation {
-            width: 25%;    
-        }
-        .fa-check-circle {
-            animation: rotate 1000ms forwards;
-        }
-    }
+
     &__body {
         display: flex;
         width: 100%;
-        &__animation {            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 1rem;
-            height: 100%;
-            order: 2;
-            background: $clrTertiary;
-            width: 0;
-            transition: all 600ms cubic-bezier(.49,.15,0,1.01);
-        }
+
         .fa-check-circle {
             font-size: 1.8rem;
             color: #fff; 
@@ -223,7 +205,7 @@ body {
         }
     }
 }
-.menu__background--alt {
+.menu__image--alt {
     @media (min-width: $breakpoint-tablet) {
         object-position: -1.2rem -10rem;
         height: 50rem;
