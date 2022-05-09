@@ -1,11 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@keyframes loaderHeart {
+@keyframes functioning {
   0% {
-    opacity: 0;
+    background: #f6f6f6;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
   }
   100% {
-    opacity: 1;
+    background: #f2eafb;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+}
+@keyframes iconColor {
+  0% {
+    color: grey;
+  }
+  100% {
+    color: #9356DC;
+  }
+}
+@keyframes cardSelect {
+  0% {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+  100% {
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
   }
 }
 @keyframes loaderHeart {
@@ -14,6 +32,194 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes check {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes backgroundText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes utensils {
+  0% {
+    opacity: 0;
+    transform: translateX(-283%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(190%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-283%);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes new {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes functioning {
+  0% {
+    background: #f6f6f6;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+  100% {
+    background: #f2eafb;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+}
+@keyframes iconColor {
+  0% {
+    color: grey;
+  }
+  100% {
+    color: #9356DC;
+  }
+}
+@keyframes cardSelect {
+  0% {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+  100% {
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+}
+@keyframes loaderHeart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes check {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes backgroundText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes utensils {
+  0% {
+    opacity: 0;
+    transform: translateX(-283%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(190%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-283%);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes new {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 * {
@@ -394,8 +600,8 @@ footer {
 footer img {
   width: 7rem;
   filter: invert(1);
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 footer ul {
   list-style: none;
@@ -404,8 +610,8 @@ footer ul {
 footer li {
   margin-bottom: 0.5rem;
   font-family: "Roboto";
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 footer li a {
   text-decoration: none;
@@ -441,9 +647,8 @@ footer .icon {
   top: 30%;
   font-family: "Shrikhand";
   font-size: 3rem;
-  background: linear-gradient(60deg, #9356DC, #99E2D0, #FF79DA);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #99E2D0;
   background-size: 500% 500%;
   animation: backgroundText 3000ms ease both, loading 3000ms ease both;
 }
@@ -452,9 +657,8 @@ footer .icon {
   top: 55%;
   z-index: 999;
   font-size: 3rem;
-  background: linear-gradient(60deg, #9356DC, #99E2D0, #FF79DA);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #FF79DA;
   background-size: 500% 500%;
   animation: backgroundText 3000ms ease both, loading 3000ms ease both, utensils 3000ms ease both;
 }
