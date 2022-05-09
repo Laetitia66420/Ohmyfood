@@ -52,7 +52,7 @@ body {
     padding: 0;
     overflow: hidden;
     }
-    .menu__image {
+    .menu__background {
         @media (min-width: $breakpoint-tablet) {
             height: 50rem;
         }
@@ -84,7 +84,7 @@ body {
             padding-right: 1rem;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             h2 {
                 font-family: $fontLogoAndTitles;
                 font-size: 1.4rem;
@@ -134,7 +134,15 @@ body {
         }
     }
 }
-
+.entrees {    
+    animation: fadeIn 1500ms forwards;
+}
+.plats {
+    animation: fadeIn 1500ms both 1500ms;
+}
+.desserts {
+    animation: fadeIn 1500ms both 3000ms;
+}
 
 // Menu items part
 
@@ -151,11 +159,29 @@ body {
     margin-bottom: 1.1rem;
     display: flex;
     overflow: hidden;
-
+    &:hover {
+        animation: cardSelect 300ms forwards;
+        .btn__body__animation {
+            width: 25%;    
+        }
+        .fa-check-circle {
+            animation: rotate 1000ms forwards;
+        }
+    }
     &__body {
         display: flex;
         width: 100%;
-
+        &__animation {            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1rem;
+            height: 100%;
+            order: 2;
+            background: $clrTertiary;
+            width: 0;
+            transition: all 600ms cubic-bezier(.49,.15,0,1.01);
+        }
         .fa-check-circle {
             font-size: 1.8rem;
             color: #fff; 
@@ -197,7 +223,7 @@ body {
         }
     }
 }
-.menu__image--alt {
+.menu__background--alt {
     @media (min-width: $breakpoint-tablet) {
         object-position: -1.2rem -10rem;
         height: 50rem;
@@ -225,8 +251,8 @@ z-index: -1;
     margin-bottom: 4rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     background: $gradient;
     border-radius: 30px;
     @include box-shadow;

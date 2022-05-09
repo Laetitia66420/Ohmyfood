@@ -394,9 +394,8 @@ footer {
         top: 30%;
         font-family: $fontLogoAndTitles;
         font-size: 3rem;               
-        background: linear-gradient(60deg, #9356DC, #99E2D0, #FF79DA );
         background-clip: text;
-        -webkit-text-fill-color: transparent;        
+        -webkit-text-fill-color: $clrTertiary;        
         background-size: 500% 500%;
         animation: backgroundText 3000ms ease both, loading 3000ms ease both;
     }
@@ -405,10 +404,9 @@ footer {
         top: 55%;
         z-index: 999;
         font-size: 3rem;        
-        background: linear-gradient(60deg, #9356DC, #99E2D0, #FF79DA );
         background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: $clrSecondary;
         background-size: 500% 500%;
         animation: backgroundText 3000ms ease both, loading 3000ms ease both, utensils 3000ms ease both;
-    }  
+    }    
 }
